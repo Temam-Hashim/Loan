@@ -1,0 +1,58 @@
+.subscribe {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(100, 16, 16);
+  height: 300px;
+  margin: 10px;
+  padding: 10px;
+  color: white;
+  align-items: center;
+  justify-content: center;
+  justify-content: center;
+
+  .subTitle {
+    color: white;
+    font-size: 30px;
+    font-weight: 600;
+    align-self: center;
+    padding: 5px;
+  }
+  .subText {
+    font-size: 15px;
+    font-weight: 400px;
+    margin: 5px;
+    padding: 5px;
+  }
+  .input-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+
+    .my-form-group {
+      display: flex;
+      width: 100%;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      margin: 10px;
+      padding: 10px;
+    }
+    .input-field {
+      width: 360px;
+      border-radius: 0px;
+      margin: 10px;
+      padding: 10px;
+    }
+    .sub-btn {
+      width: 120px;
+      background-color: rgb(210, 102, 30);
+      height: 40px;
+      color: white;
+      border: none;
+      // border-radius: 10px;
+      margin: 10px;
+      padding: 10px;
+    }
+  }
+}

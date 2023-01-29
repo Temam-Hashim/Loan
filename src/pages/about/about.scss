@@ -1,0 +1,112 @@
+.about {
+  padding: 5px;
+  margin: 10px;
+  background-image: radial-gradient(
+    50% 123.47% at 50% 50%,
+    #78db28c3 100%,
+    #1deec4d8 12%
+  );
+  .aboutSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom: 1px solid lightcyan;
+    margin-top: 20px;
+  }
+  .aboutDesc {
+    font-size: 16px;
+    line-height: 30px;
+    font-weight: 400px;
+    font-family: "Times New Roman", Times, serif;
+    font-style: italic;
+  }
+  .aboutDesc::first-letter {
+    font-size: 28px;
+    color: rgb(46, 146, 146);
+  }
+  .aboutTitle {
+    color: purple;
+    font-weight: bold;
+    font-family: "Times New Roman", Times, serif;
+    margin: 5px;
+    padding: 5px;
+  }
+  .sub-heading {
+    font-size: 12px;
+    font-family: "Times New Roman", Times, serif;
+    font-style: italic;
+    color: rgb(17, 148, 148);
+  }
+
+  .aboutImg {
+    width: 98%;
+    height: 300px;
+    border-radius: 20px;
+    object-fit: cover;
+  }
+  .missionSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom: 1px solid lightcyan;
+  }
+
+  .vissionSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom: 1px solid lightcyan;
+  }
+  .middle {
+    margin-top: 10px;
+    border-top: 1px solid lightgray;
+  }
+  .middleTitle {
+    font-size: 36px;
+    font-weight: 600;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    font-style: italic;
+    line-height: 32px;
+    color: purple;
+    margin-top: 10px;
+  }
+  .bottom {
+    width: 100%;
+    border-top: 1px solid #e4e4aa;
+    margin: 20px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
+    .peopleTab {
+      color: rgb(138, 19, 164);
+      font-weight: 800;
+      font-family: "Times New Roman", Times, serif;
+      font-size: 13px;
+    }
+  }
+
+  .peopleTab {
+    color: rgb(19, 190, 228);
+    font-size: 12px;
+    font-weight: 600px;
+    font-style: italic;
+  }
+  .displayImage {
+    border-bottom: 1px solid lightgray;
+  }
+  .people-image {
+    width: 280px;
+    height: 200px;
+    margin: 10px;
+    border-radius: 12px;
+    object-fit: cover;
+    justify-content: center;
+    align-items: center;
+  }
+}

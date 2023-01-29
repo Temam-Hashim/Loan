@@ -1,0 +1,126 @@
+.main {
+  -webkit-box-shadow: 2px 4px 10px 1px #999b9d1f;
+  box-shadow: 2px 4px 10px 1px #8c8a8978;
+  margin-bottom: 10px;
+  margin: 5px;
+  background-image: radial-gradient(
+    50% 123.47% at 50% 50%,
+    #e9841e6f 0%,
+    #8718afbd 100%
+  );
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+
+  @media only screen and (max-width: 600px) {
+    .mySwiperDesktop {
+      display: none;
+    }
+  }
+  @media only screen and (min-width: 600px) {
+    .mySwiperMobile {
+      display: none;
+    }
+  }
+
+  .testimonial-header {
+    padding: 10px;
+    .title {
+      font-size: 24px;
+      color: rgb(225, 13, 194);
+      font-weight: bold;
+      font-family: "Times New Roman", Times, serif;
+      line-height: 30px;
+      align-self: center;
+    }
+    .titleText {
+      font-size: 14px;
+      color: rgb(13, 143, 195);
+      font-weight: 500px;
+      font-family: "Times New Roman", Times, serif;
+      font-style: italic;
+      align-items: center;
+      margin: 10px;
+      border-bottom: 1px solid rgb(245, 245, 245);
+    }
+  }
+
+  .testimonial-lists {
+    display: flex;
+    width: 100%;
+
+    .testimonial-card {
+      min-width: 300px;
+      -webkit-box-shadow: 2px 4px 10px 1px #999b9d1f;
+      box-shadow: 2px 4px 10px 1px #f7f5f378;
+      padding: 10px;
+      margin: 10px;
+      display: flex;
+      flex-direction: column;
+      border-top: 1px solid black;
+      border-bottom: 1px solid black;
+      border-radius: 10px;
+
+      .testimonial-text {
+        margin: 5px;
+        padding: 5px;
+        line-height: 2;
+        font-family: "Times New Roman", Times, serif;
+        font-style: italic;
+        font-weight: 400;
+      }
+
+      .testimonial-info {
+        display: flex;
+        flex-direction: row;
+
+        .user-img {
+          width: 80px;
+          height: 80px;
+          border-radius: 50%;
+          margin: 7px;
+          object-fit: cover;
+        }
+
+        .user-info {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          margin-right: 6px;
+
+          .username {
+            font-size: 18px;
+            font-weight: bold;
+            font-family: "Times New Roman", Times, serif;
+            color: hwb(0 2% 98%);
+            line-height: 2;
+          }
+          .role {
+            font-size: 15px;
+            font-weight: 500;
+            font-family: "Times New Roman", Times, serif;
+            color: #201e1e;
+          }
+          .stars {
+            color: gold;
+          }
+        }
+      }
+    }
+  }
+  .swiperSlide {
+    height: 250px;
+  }
+}
+
+// .gradient-custom {
+//   background: radial-gradient(50% 123.47% at 50% 50%, #00ff94 0%, #720059 100%),
+//     linear-gradient(121.28deg, #669600 0%, #ff0000 100%),
+//     linear-gradient(360deg, #0029ff 0%, #8fff00 100%),
+//     radial-gradient(100% 164.72% at 100% 100%, #6100ff 0%, #00ff57 100%),
+//     radial-gradient(100% 148.07% at 0% 0%, #fff500 0%, #51d500 100%);
+//   background-blend-mode: screen, color-dodge, overlay, difference, normal;
+// }
+// background: linear-gradient(to right, #f33963, #ff735b);
+//  background: linear-gradient(to right, #ff735b, #f33963);
