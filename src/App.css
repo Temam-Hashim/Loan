@@ -1,0 +1,25 @@
+:root {
+  --black: #242d49;
+  --white: #fdf9f9;
+  --main: #00aeef;
+  --inputColor: rgb(225, 218, 210);
+  --subText: #116e90ed;
+  --gray: #259abaa6;
+  --profileShadow: 0px 4px 17px 2px rgba(0, 0, 0, 0.25);
+  --hrColor: #f9e9e9;
+  --cardColor: var(--white);
+  /* --buttonBg: linear-gradient(98.63deg, var(--main) 0%, var(--info) 100%); */
+  --buttonBg: var(--main);
+  --photo: #4cb256;
+  --video: #4a4eb7;
+  --shadow: #999b9d1f;
+  --info: #ee7b28;
+  --success: #97d271;
+  --warning: #fdd198;
+  --danger: #ffd073;
+}
+
+.main-body {
+  background-color: white;
+  color: black;
+}

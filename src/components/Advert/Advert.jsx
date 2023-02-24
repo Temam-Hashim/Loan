@@ -25,6 +25,10 @@ function Advert() {
           <span className="advertName">Medical Loan</span>
           <img src="https://picsum.photos/301" alt="" class="advertImg" />
         </div>
+        {/* <div class="innerAdvert">
+          <span className="advertName">Medical Loan</span>
+          <img src="https://picsum.photos/301" alt="" class="advertImg" />
+        </div> */}
       </div>
     </div>
   );

@@ -73,7 +73,7 @@ const Topbar = () => {
               </div>
             </li>
           </ul>
-          <Link className="Link" to="/contact">
+          <Link className="Link" to="/login">
             <li className="nav-item topList loginList">
               <i className="nav-link topListLink">
                 LOGIN / SIGNUP <span className="sr-only"></span>

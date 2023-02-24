@@ -7,11 +7,10 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import CopyrightIcon from "@mui/icons-material/Copyright";
 import PinterestIcon from "@mui/icons-material/Pinterest";
-import Subscribe from "../subscribe/Subscribe";
+
 function Footer() {
   return (
     <>
-      <Subscribe />
       <div className="footer">
         <hr />
         <div className="row">
@@ -60,14 +59,16 @@ function Footer() {
             <ul className="lists copyright float-start">
               <li className="list-items">
                 <CopyrightIcon size={18} />
-                2022
+                2022{" "}
                 <a
+                  className="copy-link"
                   target="_blank"
                   rel="noreferrer"
                   href="https://www.temxtech.66ghz.com"
                 >
+                  {" "}
                   temxtech
-                </a>
+                </a>{" "}
                 all right reserved
               </li>
             </ul>
@@ -95,16 +96,16 @@ function Footer() {
               </li>
             </ul>
           </div>
-          {/* <div className="col-md-4">
-                <p className="titleFooter text-start">Subscribe to our news letter  </p>
-                <span style={{marginLeft:50}}>Monthly digest of what's new</span>
-                  <form class="form-inline">
-                  <div className='form-group subContainer'>
-                    <input className='form-control subInput' placeholder='subscribe here'/>
-                    <button className='btn btn-info subBtn'><AddIcon/></button>
-                  </div>
-                </form>
-             </div> */}
+          <div className="col-md-4">
+            <div class="form-group my-form-group">
+              <input
+                type="text"
+                placeholder="Enter Your Email"
+                class="form-control input-field"
+              />
+              <button class="sub-btn">SUBSCRIBE</button>
+            </div>
+          </div>
         </div>
       </div>
     </>

@@ -43,7 +43,9 @@ function SingleService() {
             </p>
           </div>
           <div class="apply-div float-end">
-            <button class="btn apply-btn">APPLY FOR THIS LOAN</button>
+            <Link className="Link" to="/login">
+              <button class="btn apply-btn">APPLY FOR THIS LOAN</button>
+            </Link>
           </div>
         </div>
         <div class="col-md-3 singleSide">

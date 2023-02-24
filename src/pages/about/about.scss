@@ -1,11 +1,7 @@
 .about {
   padding: 5px;
   margin: 10px;
-  background-image: radial-gradient(
-    50% 123.47% at 50% 50%,
-    #78db28c3 100%,
-    #1deec4d8 12%
-  );
+  background-color: var(--cardColor);
   .aboutSection {
     display: flex;
     justify-content: center;
@@ -17,7 +13,7 @@
   .aboutDesc {
     font-size: 16px;
     line-height: 30px;
-    font-weight: 400px;
+    font-weight: 400;
     font-family: "Times New Roman", Times, serif;
     font-style: italic;
   }
@@ -26,17 +22,17 @@
     color: rgb(46, 146, 146);
   }
   .aboutTitle {
-    color: purple;
+    color: var(--main);
     font-weight: bold;
     font-family: "Times New Roman", Times, serif;
     margin: 5px;
     padding: 5px;
   }
   .sub-heading {
-    font-size: 12px;
+    font-size: 15px;
     font-family: "Times New Roman", Times, serif;
     font-style: italic;
-    color: rgb(17, 148, 148);
+    color: var(--main);
   }
 
   .aboutImg {
@@ -70,7 +66,7 @@
     font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
     font-style: italic;
     line-height: 32px;
-    color: purple;
+    color: var(--main);
     margin-top: 10px;
   }
   .bottom {
@@ -84,9 +80,9 @@
     align-content: center;
 
     .peopleTab {
-      color: rgb(138, 19, 164);
-      font-weight: 800;
-      font-family: "Times New Roman", Times, serif;
+      color: blue;
+      font-weight: bold;
+      font-family: Arial, Helvetica, sans-serif;
       font-size: 13px;
     }
   }

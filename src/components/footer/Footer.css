@@ -1,5 +1,6 @@
 .footer {
-  background-color: rgb(146, 22, 146);
+  background: transparent;
+  background-color: var(--main);
   color: white;
   width: 100%;
 }
@@ -8,7 +9,7 @@
   font-size: 18px;
   font-weight: 500;
   line-height: 4px;
-  color: #dcd6d6;
+  color: white;
   margin-left: 20px;
   padding-bottom: 10px;
   border-bottom: 1px solid rgb(128, 125, 125);
@@ -21,14 +22,14 @@
 }
 
 .list-items {
-  color: rgb(16, 234, 226);
+  color: white;
   cursor: pointer;
   font-size: 16px;
   font-weight: 400;
   margin-bottom: 11px;
 }
 span {
-  color: rgb(186, 180, 180);
+  color: white;
   font-size: 12px;
 }
 .btn-group {
@@ -44,7 +45,7 @@ input {
 
 .subContainer {
   display: flex;
-  border: 1px solid rgb(208, 222, 222);
+  color: white;
   position: relative;
   width: 280px;
 }
@@ -63,7 +64,7 @@ input {
 .copyright {
   font-size: 18px;
   font-weight: 400;
-  color: cyan;
+  color: var(--info);
 }
 
 .social-lists {
@@ -74,14 +75,14 @@ ul {
   list-style: none;
 }
 li {
-  color: cyan;
+  color: white;
   font-size: 14px;
 }
 .social {
   margin: 10px;
   font-weight: bold;
   font-size: 20px;
-  color: rgb(16, 234, 226);
+  color: white;
   cursor: pointer;
   font-weight: 500;
   margin-bottom: 10px;
@@ -101,4 +102,23 @@ li {
   .last-col {
     display: none;
   }
+}
+
+.my-form-group {
+  display: flex;
+  flex-direction: row;
+  width: 95%;
+  margin: 0 3px 7px 3px;
+}
+.sub-btn {
+  background-color: var(--info);
+  border: none;
+  height: 2.5rem;
+  border-radius: 5px;
+}
+.copy-link {
+  color: white;
+}
+.copy-link:hover {
+  color: red;
 }

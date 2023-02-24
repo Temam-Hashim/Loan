@@ -5,7 +5,7 @@
   margin: 5px;
   padding: 10px;
   .subTitle {
-    color: purple;
+    color: var(--subText);
     font-size: 38px;
     font-weight: 600;
     align-self: center;
@@ -14,12 +14,12 @@
   .subText {
     font-size: 16px;
     font-weight: 400px;
-    color: rgb(20, 139, 139);
+    color: var(--subText);
   }
 }
 #counter {
-  background-color: #ffb400;
-  color: #fff;
+  background-color: var(--cardColor);
+  color: var(--info);
   display: block;
   overflow: hidden;
   text-align: center;
@@ -27,19 +27,22 @@
 }
 #counter .count {
   padding: 50px;
-  background: rgba(255, 255, 255, 0.1);
-  color: #fff;
+  background: transparent;
+  color: var(--info);
   text-align: center;
+  -webkit-box-shadow: 2px 4px 10px 1px #999b9d1f;
+  box-shadow: 2px 4px 10px 1px #8c8a8978;
+  margin-top: 10px;
 }
 .count h4 {
-  color: #fff;
+  color: var(--info);
   font-size: 16px;
   margin-top: 0;
 }
 #counter .count .fa {
   font-size: 40px;
   display: block;
-  color: #fff;
+  color: var(--info);
 }
 #counter .number {
   font-size: 30px;
@@ -49,7 +52,7 @@
 /*  Pricing Section  */
 
 #pricing {
-  background: #f7f7f7;
+  background-color: var(--info);
 }
 .pricing-items {
   padding-top: 50px;

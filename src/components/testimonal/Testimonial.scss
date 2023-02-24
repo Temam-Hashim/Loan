@@ -3,11 +3,7 @@
   box-shadow: 2px 4px 10px 1px #8c8a8978;
   margin-bottom: 10px;
   margin: 5px;
-  background-image: radial-gradient(
-    50% 123.47% at 50% 50%,
-    #e9841e6f 0%,
-    #8718afbd 100%
-  );
+  background-color: var(--cardColor);
   justify-content: center;
   align-items: center;
   align-content: center;
@@ -27,7 +23,8 @@
     padding: 10px;
     .title {
       font-size: 24px;
-      color: rgb(225, 13, 194);
+      color: var(--subText);
+
       font-weight: bold;
       font-family: "Times New Roman", Times, serif;
       line-height: 30px;
@@ -35,7 +32,7 @@
     }
     .titleText {
       font-size: 14px;
-      color: rgb(13, 143, 195);
+      color: var(--subText);
       font-weight: 500px;
       font-family: "Times New Roman", Times, serif;
       font-style: italic;

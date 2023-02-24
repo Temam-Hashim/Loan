@@ -6,16 +6,11 @@
   margin-top: 25px;
   -webkit-box-shadow: 2px 4px 10px 1px #999b9d1f;
   box-shadow: 2px 4px 10px 1px #8c8a8978;
-  background-image: radial-gradient(
-    50% 123.47% at 50% 50%,
-    #1ee9b36f 0%,
-    #003b7227 100%
-  );
-  background-blend-mode: screen, color-dodge, overlay, difference, normal;
+  background-color: var(--cardColor);
 
   .heading {
     font-size: 24px;
-    color: rgb(225, 13, 194);
+    color: var(--subText);
     font-weight: bold;
     font-family: "Times New Roman", Times, serif;
     line-height: 30px;
@@ -23,7 +18,7 @@
   }
   .sub-heading {
     font-size: 14px;
-    color: darkblue;
+    color: var(--subText);
     font-weight: 400px;
     font-family: "Times New Roman", Times, serif;
     font-style: italic;
@@ -37,7 +32,7 @@
     justify-content: center;
     align-items: center;
     .serviceBox {
-      -webkit-box-shadow: 2px 4px 10px 1px #999b9d1f;
+      -webkit-box-shadow: 2px 4px 10px 1px #7375771f;
       box-shadow: 2px 4px 10px 1px #8c8a8978;
       overflow-x: hidden;
       margin: 10px 0px 20px 0px;
@@ -51,9 +46,10 @@
       margin-left: 12px;
       .serviceTitle {
         font-size: 22px;
-        color: rgb(35, 163, 163);
-        font-family: "Times New Roman", Times, serif;
+        color: var(--subText);
+        font-family: Arial, Helvetica, sans-serif;
         margin: 5px;
+        gap: 1rem;
         padding: 5px;
         cursor: pointer;
       }
@@ -64,8 +60,9 @@
         cursor: pointer;
       }
       .serviceDesc {
-        font-family: "Times New Roman", Times, serif;
+        font-family: Arial, Helvetica, sans-serif;
         font-size: 13px;
+        font-weight: 500;
         line-height: 30px;
         overflow: hidden;
         text-overflow: ellipsis;
@@ -76,11 +73,12 @@
       }
       .serviceDesc::first-letter {
         font-size: 22px;
-        color: rgb(36, 132, 216);
+        color: var(--main);
       }
       .readBtn {
-        color: rgb(16, 128, 128);
-        border: 1px solid rgb(191, 33, 191);
+        background-color: var(--buttonBg);
+        color: var(--white);
+        border: 1px solid var(--main);
         border-radius: 10px;
         font-size: 11px;
         font-weight: 600;
