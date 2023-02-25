@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import leftImage from "./../../assets/image/bg1.jpg";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import { borderBottom } from "@mui/system";
 
 function Register() {
   const [hide, setHide] = useState(1);
@@ -12,6 +13,30 @@ function Register() {
   const [userData, setUserData] = useState({});
   const [pass, setPass] = useState("");
   const [passConfirm, setPassConfirm] = useState("");
+  const [wrong, setWrong] = useState(false);
+
+  // useEffect(() => {
+  //   const timeId = setTimeout(() => {
+  //     message != "" && setMessage("");
+  //   }, 1000);
+  //   return () => {
+  //     clearTimeout(timeId);
+  //   };
+  // }, []);
+
+  // validate account
+
+  const handleAccountChange = (e) => {
+    setAccount(e.target.value);
+    if (e.target.value.length < 10) {
+      setWrong(true);
+      setMessage("Account Number must be of 10 Length");
+    }
+    if (isNaN(e.target.value)) {
+      setWrong(true);
+      setMessage("Invaliid input for account number");
+    }
+  };
 
   // check account page and function
   const CheckAccount = async (e) => {
@@ -44,14 +69,24 @@ function Register() {
       }
     }
   };
+  // confirm info
+  const ConfirmInfo = async (e) => {
+    e.preventDefault();
+    setHide(3);
+  };
+
+  const OtpGenerator = () => {
+    // generate random OTP
+    const randomOTP = Math.floor(Math.random() * 90000) + 10000;
+    return randomOTP;
+  };
 
   // confirm user otp with generated value
   const ConfirmOTP = (e) => {
     e.preventDefault();
-    // generate random OTP
-    // const randomOTP = Math.floor(Math.random() * 90000) + 10000;
+
     const randomOTP = 12345;
-    console.log(randomOTP);
+
     if (userOTP === "") {
       setMessage("OTP is Required");
     } else if (userOTP != randomOTP) {
@@ -70,8 +105,41 @@ function Register() {
       setMessage("The two password must match!");
     } else {
       // add data to db
-      setMessage("Operation Successful ! Your Account has been Created");
-      setLoginMessage(true);
+
+      const url = "http://localhost:5010/api/v1/customers";
+      const data = {
+        full_name: userData.name,
+        email: userData.email,
+        mobile: userData.mobile,
+        password: pass,
+        gender: userData.gender,
+        dob: userData.dob,
+        branch: userData.branch,
+        account_no: userData.account_no,
+        account_status: userData.account_status,
+        account_type: userData.account_type,
+      };
+
+      try {
+        await axios.post(url, data).then((res) => {
+          console.log(res.data.message);
+          setMessage("Operation Successful ! Your Account has been Created");
+          setLoginMessage(true);
+          setPass("");
+          setPassConfirm("");
+        });
+      } catch (error) {
+        console.log(error);
+        if (error.message === "Request failed with status code 409") {
+          setMessage(
+            "Operation Failed ! User With Same Credential Exist in our System"
+          );
+          setLoginMessage(true);
+        } else if (error.message === "Request failed with status code 500") {
+          setMessage("Operation Failed ! Server Error Please try again later");
+          setLoginMessage(true);
+        }
+      }
     }
   };
 
@@ -97,12 +165,24 @@ function Register() {
               )}
 
               <form className="login-form ">
-                <input
-                  type="text"
-                  className="login-input "
-                  placeholder="Enter Your Account Number"
-                  onChange={(e) => setAccount(e.target.value)}
-                />
+                {setWrong ? (
+                  <input
+                    type="text"
+                    style={{
+                      borderBottom: "1px solid red",
+                    }}
+                    className="login-input "
+                    placeholder="Enter Your Account Number"
+                    onChange={handleAccountChange}
+                  />
+                ) : (
+                  <input
+                    type="text"
+                    className="login-input "
+                    placeholder="Enter Your Account Number"
+                    onChange={handleAccountChange}
+                  />
+                )}
 
                 <button
                   className="login-btn"
@@ -185,13 +265,7 @@ function Register() {
                   >
                     Cancel
                   </button>
-                  <button
-                    className="confirm"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      setHide(3);
-                    }}
-                  >
+                  <button className="confirm" onClick={(e) => ConfirmInfo(e)}>
                     Confirm
                   </button>
                 </div>
@@ -240,7 +314,7 @@ function Register() {
 
             {message !== "" && (
               <span
-                className="alert alert-danger m-2 text-center alert-dismissible"
+                className="alert alert-info m-2 text-center alert-dismissible"
                 style={{ width: "70%", minHeight: 52 }}
               >
                 {message}{" "}
